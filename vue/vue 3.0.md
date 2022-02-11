@@ -98,7 +98,7 @@ function add() {
 }
 ```
 
-# mitt兄弟组件通信
+# emitter兄弟组件通信
 
 ```typescript
 import emitter from '../utils/eventbus'
@@ -130,14 +130,14 @@ emitter.off('type', fn)
 
 # slot插槽
 
-```
+```vue
 定义好slot
 <slot />
 ```
 
 ## 默认插槽
 
-```
+```vue
 <slot>
 	<div></div>
 </slot>
@@ -434,25 +434,6 @@ router.addRoute("home", {
 ```
 
 ## 路由导航守卫
-
-
-
-# vuex
-
-```
-npm install vuex@next --save
-```
-
-```
-import { createStore } from 'vuex'
-
-export const store = createStore({
-  state: {
-    count: 0,
-  },
-})
-
-```
 
 
 

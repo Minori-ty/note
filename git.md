@@ -20,15 +20,26 @@ for b in `git branch -r | grep -v -- '->'`; do git branch --track ${b##origin/} 
 
 
 
-## fetch
+## git rebase合并分支避免merge into...
 
 ```
-git fetch origin develop
+git fetch
+git rebase origin/master
+解决冲突
+git rebase --continue
 ```
 
 
 
-## git修改远程仓库地址
+## git remote远程仓库地址
+
+#### git remote add添加远程地址
+
+```
+git remote add origin xxx
+```
+
+#### git remote set-url修改远程地址
 
 ```
 git remote set-url origin https://xxx
