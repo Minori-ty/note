@@ -549,7 +549,8 @@ $new_content: "First time reference" !default;
 // 编译为：
 #main {
   content: "First content";
-  new-content: "First time reference"; }
+  new-content: "First time reference"; 
+}
 ~~~
 
 注意：变量是 null 空值时将视为未被 `!default` 赋值。
@@ -665,7 +666,9 @@ Sass 中 `@media` 指令与 CSS 中用法一样，只是增加了一点额外的
 // 编译为：
 @media screen and (orientation: landscape) {
   .sidebar {
-    width: 500px; } }
+    width: 500px;
+    }
+}
 ~~~
 
 `@media` 甚至可以使用 SassScript（比如变量，函数，以及运算符）代替条件的名称或者值
@@ -683,7 +686,9 @@ $value: 1.5;
 // 编译为：
 @media screen and (-webkit-min-device-pixel-ratio: 1.5) {
   .sidebar {
-    width: 500px; } }
+    width: 500px; 
+    }
+}
 ~~~
 
 
@@ -726,13 +731,16 @@ a. `基本延伸`
 }
 // .error, .seriousError {
   border: 1px #f00;
-  background-color: #fdd; }
+  background-color: #fdd; 
+}
 
 .error.intrusion, .seriousError.intrusion {
-  background-image: url("/image/hacked.png"); }
+  background-image: url("/image/hacked.png"); 
+}
 
 .seriousError {
-  border-width: 3px; }
+  border-width: 3px;
+}
 ~~~
 
 当合并选择器时，`@extend` 会很聪明地避免无谓的重复，`.seriousError.seriousError` 将编译为 `.seriousError`，不能匹配任何元素的选择器也会删除。
@@ -768,7 +776,8 @@ e.`*选择器列`：暂时不可以将选择器列 (Selector Sequences)，比如
    #admin .tabbar a,
    #admin .tabbar #demo .overview .fakelink,
    #demo .overview #admin .tabbar .fakelink {
-     font-weight: bold; }
+     font-weight: bold; 
+   }
    ~~~
 
    
@@ -786,9 +795,10 @@ e.`*选择器列`：暂时不可以将选择器列 (Selector Sequences)，比如
    #admin .tabbar a,
    #admin .tabbar .overview .fakelink,
    #admin .overview .tabbar .fakelink {
-     font-weight: bold; }
+     font-weight: bold; 
+   }
    ~~~
-
+   
    
 
 f. `在指令中延伸`
@@ -999,11 +1009,14 @@ through 和 to 的相同点与不同点：
 
 // compile:
 .item-1 {
-  width: 2em; }
+  width: 2em; 
+}
 .item-2 {
-  width: 4em; }
+  width: 4em;
+}
 .item-3 {
-  width: 6em; }
+  width: 6em;
+}
 ~~~
 
 
@@ -1031,11 +1044,14 @@ $i: 6;
 
 // compile:
 .item-6 {
-  width: 12em; }
+  width: 12em; 
+}
 .item-4 {
-  width: 8em; }
+  width: 8em;
+}
 .item-2 {
-  width: 4em; }
+  width: 4em; 
+}
 ~~~
 
 
@@ -1067,13 +1083,17 @@ $i: 6;
   
   // compile:
   .puma-icon {
-    background-image: url('/images/puma.png'); }
+    background-image: url('/images/puma.png'); 
+  }
   .sea-slug-icon {
-    background-image: url('/images/sea-slug.png'); }
+    background-image: url('/images/sea-slug.png'); 
+  }
   .egret-icon {
-    background-image: url('/images/egret.png'); }
+    background-image: url('/images/egret.png'); 
+  }
   .salamander-icon {
-    background-image: url('/images/salamander.png'); }
+    background-image: url('/images/salamander.png'); 
+  }
   ~~~
 
 - 二维列表
@@ -1093,15 +1113,18 @@ $i: 6;
   .puma-icon {
     background-image: url('/images/puma.png');
     border: 2px solid black;
-    cursor: default; }
+    cursor: default; 
+  }
   .sea-slug-icon {
     background-image: url('/images/sea-slug.png');
     border: 2px solid blue;
-    cursor: pointer; }
+    cursor: pointer; 
+  }
   .egret-icon {
     background-image: url('/images/egret.png');
     border: 2px solid white;
-    cursor: move; }
+    cursor: move; 
+  }
   ~~~
 
 - maps
@@ -1115,13 +1138,16 @@ $i: 6;
   
   // compile:
   h1 {
-    font-size: 2em; }
+    font-size: 2em;
+  }
   h2 {
-    font-size: 1.5em; }
+    font-size: 1.5em;
+  }
   h3 {
-    font-size: 1.2em; }
+    font-size: 1.2em;
+  }
   ~~~
-
+  
   
 
 
