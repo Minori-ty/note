@@ -129,3 +129,16 @@ width: calc(100% - 50px);
 }
 ```
 
+# 文字超出显示省略号
+
+```css
+{
+    /* 文字超出隐藏*/
+    overflow: hidden;
+    /*文字在一行显示*/
+    white-space: nowrap;
+    /*文字超出省略号*/
+    text-overflow: ellipsis;
+}
+```
+

@@ -1,10 +1,11 @@
 # ES6
 
-##  7种基本数据类型
+##  8种数据类型
 
 you are so niubity
 
 - U  undefind
+- A  array
 - S   string  symbol
 - O  object
 - N  null number

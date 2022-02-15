@@ -8,6 +8,12 @@
 git clone -b develop http://gitslab.yiqing.com/declare/about.git
 ```
 
+### 创建分支并且连接远程分支
+
+```
+git checkout -b xx origin/xxx
+```
+
 
 
 ### 克隆全部分支
@@ -49,10 +55,10 @@ git remote set-url origin https://xxx
 
 ## branch
 
-### 创建干净的分支
+### --orphan创建干净的分支
 
 ```
-git checkout --orphan
+git checkout --orphan xxx
 ```
 
 

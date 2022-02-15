@@ -26,6 +26,8 @@ enum Gender {
 }
 ```
 
+
+
 ## 数组
 
 ```
@@ -35,6 +37,8 @@ let d: (number | string)[]
 //let arr: Array<number> 不常用
 ```
 
+
+
 ## 函数
 
 ```
@@ -42,6 +46,61 @@ function fn(params:string):number{
 	return -params
 }
 ```
+
+## 函数重载
+
+```typescript
+function fn(x: "Tom"): string
+function fn(x: "Jack"): number
+function fn(x: "Tom" | "Jacl"): string | number {
+    return x=== "Tom" ? 
+}
+```
+
+![image-20220214180304540](../images/image-20220214180304540.png)
+
+## never穷尽检查
+
+```typescript
+type A = {
+    type: 'A'
+}
+type B = {
+    type: 'B'
+}
+type C = {
+    type: 'C'
+}
+type Te = A | B
+function fn(x: Te) {
+    if (x.type === 'A') {
+        return x
+    } else if (x.type === 'B') {
+        return x
+    } else {
+        const b: never = x
+        return b
+    }
+}
+```
+
+
+
+## 泛型限制
+
+```typescript
+function fn<T extends { length: number }>(a: T, b: T) {
+    if (a.length >= b.length) {
+        return a
+    } else {
+        return b
+    }
+}
+const ss = fn([1], [2])
+const s = fn('xx', 'xxx')
+```
+
+
 
 ## 对象
 
@@ -53,6 +112,8 @@ let obj:{
 }
 //必须要有name属性，其他可以随意
 ```
+
+
 
 ## 接口
 
@@ -106,7 +167,7 @@ class Father{
 
 ### 简化写法(语法糖)
 
-```
+```js
 class Father{	
 	constructor(public name:string){}
 }
@@ -171,7 +232,7 @@ console.log(son)
 
 ## 接口
 
-```
+```js
 interface Inter{
 	name:string
 	say():void;
