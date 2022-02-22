@@ -127,6 +127,14 @@ git stash list
 git stash clear
 ```
 
+## git log
+
+查看树表图
+
+```
+git log --oneline --graph 
+```
+
 
 
 ## git diff

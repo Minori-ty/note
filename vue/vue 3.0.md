@@ -174,7 +174,11 @@ emitter.off('type', fn)
 
 ## v-slot=作用域插槽
 
+让父组件可以向子组件指定的位置插入html结构
+
 ```vue
+//父组件
+
 <template>
     <son :left="left" :arr="arr">
         <template #="a">
@@ -187,6 +191,8 @@ const arr = [7, 8, 9, 10]
 ```
 
 ```vue
+//子组件
+
 <template>
     <template v-for="(item, index) in arr">
         <slot :item="item" :index="index"></slot>
@@ -220,6 +226,8 @@ const arr = [7, 8, 9, 10]
 ```
 
 ```vue
+//son.vue
+
 <template>
     <template v-for="(item, index) in arr">
         <slot :item="item" :index="index" name="center"></slot>
