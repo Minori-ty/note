@@ -102,6 +102,20 @@ git reset .
 
 ctrl单击
 
+### 撤销commit，且保留代码
+
+```
+git reset --soft HEAD^
+```
+
+### 只修改commit注释
+
+```
+git commit --amend
+```
+
+进入vim编辑器修改提交信息
+
 
 
 ## git stash

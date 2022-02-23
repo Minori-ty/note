@@ -5,11 +5,16 @@
 you are so niubity
 
 - U  undefind
-- A  array
-- S   string  symbol
-- O  object
-- N  null number
-- B  boolean
+
+- S   String  Symbol
+
+- O  Object
+
+- N  null Number
+
+- B  Boolean BigInt
+
+  其中Object引用数据类型分为Array、Function
 
 ## 解构赋值
 

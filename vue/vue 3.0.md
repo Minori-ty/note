@@ -176,13 +176,21 @@ emitter.off('type', fn)
 
 让父组件可以向子组件指定的位置插入html结构
 
+子组件要写插槽名，父组件要指定插槽。如果不写的话，则是默认插槽name="default" v-slot:default
+
+v-slot可以简写成#，即#default
+
+子组件向父组件传递数据时，使用自定义属性来传递  如item=""，index=""
+
+而父组件则通过v-slot=“scope”来接收，可以简写成#default=“scope”，即#=“scope”
+
 ```vue
 //父组件
 
 <template>
     <son :left="left" :arr="arr">
-        <template #="a">
-            <button>{{ a.item }}</button>
+        <template #son="scope">
+            <button>{{ scope.item }}</button>
         </template>
     </son>
 </template>
@@ -195,7 +203,7 @@ const arr = [7, 8, 9, 10]
 
 <template>
     <template v-for="(item, index) in arr">
-        <slot :item="item" :index="index"></slot>
+        <slot :item="item" :index="index" name="son"></slot>
     </template>
 </template>
 
