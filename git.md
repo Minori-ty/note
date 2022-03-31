@@ -120,6 +120,8 @@ git commit --amend
 
 ## git stash
 
+暂存工作区
+
 ```
 git stash
 ```
@@ -130,6 +132,10 @@ git stash
 
 ```
 git stash pop
+```
+
+```
+git stash apply
 ```
 
 

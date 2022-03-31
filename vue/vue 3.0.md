@@ -297,6 +297,28 @@ defineProps({
 </style>
 ```
 
+### el-table的动态插槽
+
+```vue
+<el-table :data="list">
+    <template v-for="propItem in propList" :key="propItem.prop">
+		<el-table-column v-bind="propItem">
+            <template #default="scope">
+                <slot :name="propItem.soltName">
+        			{{scope.row[propItem.prop]}}
+        		</slot>
+    		</template>
+        </el-table-column>
+    </template>
+</el-table>
+
+<script setup>
+	propList=[]
+</script>
+```
+
+
+
 # watchEffect
 
 ```js
