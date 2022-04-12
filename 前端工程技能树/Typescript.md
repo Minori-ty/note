@@ -196,7 +196,15 @@ class Son extends Father {
 }
 ```
 
-
+```typescript
+type p<T extends 'jack' | 'tom'> = T extends 'jack' ? number : string
+function f<T extends 'jack' | 'tom'>(pa: T): p<T> {
+    if (pa === 'jack') return 123 as p<T>
+    return '' as p<T>
+}
+f('jack')
+f('tom')
+```
 
 ## 抽象类（不能被实例化，只能用来继承extends）
 

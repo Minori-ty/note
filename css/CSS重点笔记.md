@@ -142,3 +142,14 @@ width: calc(100% - 50px);
 }
 ```
 
+# 媒体查询
+
+```css
+@media screen and (max-width: 375px) {
+    img {
+        width: 70px !important;
+        // vertical-align: middle;
+    }
+}
+```
+
