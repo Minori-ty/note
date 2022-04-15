@@ -43,6 +43,25 @@ COPY ./nginx/default.conf /etc/nginx/conf.d/default.conf
 # docker run -p 4000:80 -it --name web vue3
 ```
 
+```yml
+FROM node:16.13.1 as builder
+
+WORKDIR /WWW/WWWROOT/
+
+ADD package.json /WWW/WWWROOT/
+RUN npm i
+
+ADD . /WWW/WWWROOT/
+
+RUN npm run build
+
+FROM nginx
+
+COPY --from=builder WWW/WWWROOT/dist/ /usr/share/nginx/html/
+```
+
+
+
 ## 删除镜像
 
 ```
